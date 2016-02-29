@@ -17,6 +17,7 @@ import sys, os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('../ML16'))
 sys.path.insert(0, os.path.relpath('../code'))
+print("hoge"+str(os.path))
 # -- General configuration -----------------------------------------------------
 #sys.path.append(os.path.dirname(__file__))
 #sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__))))
