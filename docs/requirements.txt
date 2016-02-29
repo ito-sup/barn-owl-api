@@ -1,0 +1,6 @@
+Django==1.8.6
+django-admin-tools==0.7.2
+django-braces==1.8.1
+django-cors-headers==1.1.0
+django-oauth-toolkit==0.9.0
+mod-wsgi==4.4.21
