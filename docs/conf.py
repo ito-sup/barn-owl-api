@@ -12,8 +12,6 @@
 # serve to show the default.
 
 import sys, os
-from IPython.utils.tests.test_path import setup_environment
-
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -21,11 +19,7 @@ from IPython.utils.tests.test_path import setup_environment
 sys.path.insert(0, os.path.abspath('../code'))
 # -- General configuration -----------------------------------------------------
 sys.path.append(os.path.dirname(__file__))
-#os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings")
 os.environ["DJANGO_SETTINGS_MODULE"]= "ML.settings"
-#settings = __import__(os.environ("DJANGO_SETTINGS_MODULE"))
-
-
 # If your documentation needs a minimal Sphinx version, state it here.
 #needs_sphinx = '1.0'
 
