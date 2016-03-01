@@ -12,6 +12,7 @@
 # serve to show the default.
 
 import sys, os
+from test.test_decimal import directory
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -22,8 +23,8 @@ print("hoge"+str(sys.path))
 #sys.path.append(os.path.dirname(__file__))
 #sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__))))
 os.environ["DJANGO_SETTINGS_MODULE"]= "ML.settings"
-import django
-django.setup()
+#import django
+#django.setup()
 # If your documentation needs a minimal Sphinx version, state it here.
 #needs_sphinx = '1.0'
 
@@ -34,7 +35,6 @@ extensions = ['sphinx.ext.todo', 'sphinx.ext.autodoc', 'sphinx.ext.napoleon']
 extensions.append('sphinx.ext.mathjax')
 #mathjax_path = 'http://mathjax.connectmv.com/MathJax.js?config=default'
 mathjax_path = 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default'
-
 # Add any paths that contain templates here, relative to this directory.
 templates_path = [u'_templates']
 
