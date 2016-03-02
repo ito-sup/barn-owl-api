@@ -16,13 +16,16 @@ import sys, os
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('../ML16'))
-sys.path.insert(0, os.path.relpath('./code'))
-print("hoge"+str(sys.path))
+sys.path.insert(0, os.path.abspath('./code'))
 # -- General configuration -----------------------------------------------------
-#sys.path.append(os.path.dirname(__file__))
+sys.path.append(os.path.dirname(__file__))
+import django
 #sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__))))
-os.environ["DJANGO_SETTINGS_MODULE"]= "ML.settings"
-#import django
+os.environ["DJANGO_SETTINGS_MODULE"]= "settings"
+if django.VERSION < (1,4):
+    from django.core.management import setup_environ
+    settings = __import__(os.environ["DJANGO_SETTINGS_MODULE"])
+    setup_environ(settings)
 #django.setup()
 # If your documentation needs a minimal Sphinx version, state it here.
 #needs_sphinx = '1.0'
