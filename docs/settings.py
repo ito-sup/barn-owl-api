@@ -45,7 +45,7 @@ INSTALLED_APPS = (
     'rest_framework',
     'oauth2_provider',
     'mod_wsgi.server',
-    'regression',
+    'regression.models',
     'recommendation',
     'classification',
     'clustering'
